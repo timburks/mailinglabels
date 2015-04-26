@@ -1,0 +1,21 @@
+This little Go program renders addresses into a PDF that
+is formatted for Avery 5160 labels.
+
+Addresses are read from a text file "addresses.txt" and
+each address must consist of three parts with parts
+separated by the '$' character.
+
+For example, here is a sample addresses.txt file:
+
+=== addresses.txt =========================================
+Google$1600 Amphitheater Parkway$Mountain View, CA 94943
+Apple Inc.$1 Infinite Loop$Cupertino, CA 95014
+Department of Mathematics$970 Evans Hall$Berkeley, CA 94720
+===========================================================
+
+Labels are written to a file named labels.pdf.
+
+Released into the public domain.
+
+Tim Burks
+Los Altos, California
