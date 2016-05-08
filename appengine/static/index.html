@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mailing Label Maker</title>
+<link href="/stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Mailing Label Maker</h1>
+<p>This little web application renders addresses into a PDF that is formatted for Avery 5160 labels.</p>
+<p>To use it, upload a text file containing a list of addresses, one address per line.<br/>
+Each address must consist of three parts with parts separated by the '$' character.</p>
+<p>For example, here is a sample address file:</p>
+<pre>
+Google$1600 Amphitheater Parkway$Mountain View, CA 94943
+Apple Inc.$1 Infinite Loop$Cupertino, CA 95014
+Department of Mathematics$970 Evans Hall$Berkeley, CA 94720
+</pre>
+<form method="POST" enctype="multipart/form-data" action="/labels">
+  <input type="file" name="addresses">
+  <input type="submit" value="Upload Selected File">
+</form>
+<p>Uploaded addresses are not logged or archived.<br/>
+Source code for this site is available on <a href="http://github.com/timburks/mailinglabels">GitHub</a>.
+</body>
+</html>

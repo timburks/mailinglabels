@@ -1,0 +1,7 @@
+This directory contains a Google App Engine app that renders
+addresses into a PDF that is formatted for Avery 5160 labels.
+
+Released into the public domain.
+
+Tim Burks
+Los Altos, California
