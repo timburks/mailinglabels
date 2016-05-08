@@ -35,9 +35,15 @@ func ReadAddresses(filename string) (addresses []Address) {
 		line = strings.TrimSpace(line)
 		parts := strings.Split(line, "$")
 		var address Address
-		address.Name = parts[0]
-		address.Street = parts[1]
-		address.CityStateZip = parts[2]
+		if len(parts) > 0 {
+			address.Name = strings.TrimSpace(parts[0])
+		}
+		if len(parts) > 1 {
+			address.Street = strings.TrimSpace(parts[1])
+		}
+		if len(parts) > 2 {
+			address.CityStateZip = strings.TrimSpace(parts[2])
+		}
 		addresses = append(addresses, address)
 	}
 	return
